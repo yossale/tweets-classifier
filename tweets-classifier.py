@@ -290,7 +290,8 @@ with open(sys.argv[3], "w") as resFile:
         else:
             processedLines = processedLines + 1
             dataPoint = { 'id': csv_row[0], 'content': csv_row[1] }
-            dataPoint['guess'] = classifier.classify(tweet_features(dataPoint))
-            resFile.write("\t".join([dataPoint['id'], dataPoint['content'], dataPoint['guess']]) + "\n")
+            guess = classifier.classify(tweet_features(dataPoint))
+            label = '0' if guess == 'bad' else '1'
+            resFile.write("\t".join([dataPoint['id'], label]) + "\n")
             
 print 'Labeled %s lines, Results are at %s' % (processedLines, sys.argv[3])
