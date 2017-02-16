@@ -1,0 +1,25 @@
+fp: [268]. fn: [37], tp: [666], tn: [432]
+Total test size: 1403. Pos: [3522], Neg: [3490] precision: [0.713062098501], recall: [0.947368421053]
+Accuracy:  0.782608695652
+Most Informative Features
+      contains(to,win,a) = True              bad : good   =     51.5 : 1.0
+  contains(enter,to,win) = True              bad : good   =     46.1 : 1.0
+        contains(,LINK,) = True              bad : good   =      9.8 : 1.0
+  contains(find,out,how) = True              bad : good   =      9.8 : 1.0
+contains(looking,forward,to) = True             good : bad    =      6.3 : 1.0
+     contains(i,want,to) = True              bad : good   =      6.0 : 1.0
+  contains(check,it,out) = True              bad : good   =      5.1 : 1.0
+    contains(to,try,the) = True              bad : good   =      5.1 : 1.0
+    contains(at,the,end) = True             good : bad    =      4.3 : 1.0
+     contains(i,have,to) = True             good : bad    =      4.3 : 1.0
+    contains(be,able,to) = True             good : bad    =      4.3 : 1.0
+    contains(the,end,of) = True             good : bad    =      4.3 : 1.0
+contains(build,customer,loyalty) = True              bad : good   =      3.7 : 1.0
+            contains(,,) = True              bad : good   =      3.7 : 1.0
+     contains(be,one,of) = True              bad : good   =      3.7 : 1.0
+  contains(want,to,read) = True              bad : good   =      3.7 : 1.0
+  contains(have,no,idea) = True             good : bad    =      3.6 : 1.0
+       contains(to,be,a) = True             good : bad    =      3.6 : 1.0
+   contains(it,comes,to) = True             good : bad    =      3.6 : 1.0
+   contains(of,the,year) = True             good : bad    =      3.6 : 1.0
+Labeled 100 lines, Results are at sampleRes.tsv
