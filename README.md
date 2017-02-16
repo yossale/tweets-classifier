@@ -1,9 +1,8 @@
 # tweets-classifier
 
-to run:
-pip install nltk
+setup: ```pip install nltk```
 
-python tweets-classifier.py <LabeledTrainingData.tsv> <RealData.tsv> <ResFile.tsv>
+run: ```python tweets-classifier.py <LabeledTrainingData.tsv> <RealData.tsv> <ResFile.tsv>```
 
 ###LabeledTrainingData 
 Should be in this **tsv** format:
