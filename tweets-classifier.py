@@ -280,3 +280,17 @@ print 'Total test size: %s. Pos: [%s], Neg: [%s] precision: [%s], recall: [%s]' 
 print 'Accuracy: ', nltk.classify.accuracy(classifier, test_set)
 
 classifier.show_most_informative_features(20)
+
+processedLines = 0
+with open(sys.argv[3], "w") as resFile:
+    for line in open(sys.argv[2]):
+        csv_row = line.strip().split('\t')
+        if len(csv_row) != 2:
+            print 'Failed to parse: [%s]' % (line)
+        else:
+            processedLines = processedLines + 1
+            dataPoint = { 'id': csv_row[0], 'content': csv_row[1] }
+            dataPoint['guess'] = classifier.classify(tweet_features(dataPoint))
+            resFile.write("\t".join([dataPoint['id'], dataPoint['content'], dataPoint['guess']]) + "\n")
+            
+print 'Labeled %s lines, Results are at %s' % (processedLines, sys.argv[3])
